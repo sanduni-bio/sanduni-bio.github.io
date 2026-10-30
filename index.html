@@ -4,22 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sanduni Navodya - Digital Experience, Content Management, MarTech and Digital Marketing professional based in Sri Lanka.">
-  <title>Sanduni Navodya | Digital Experience Professional</title>
+  <meta name="description" content="Sanduni Navodya - Digital Consultant and Content Lead specialising in digital experience, CMS, web content, SEO and marketing technology.">
+  <title>Sanduni Navodya | Digital Consultant & Content Lead</title>
+
   <style>
     :root {
-  --bg: #111827;
-  --surface: #1f2937;
-  --text: #f3f4f6;
-  --muted: #a1aab8;
-  --accent: #8baaff;
-  --line: #374151;
-  --soft: #273449;
-}
+      --bg: #0b1120;
+      --surface: #151f32;
+      --surface-light: #1d2b43;
+      --text: #f1f5f9;
+      --muted: #a6b2c5;
+      --accent: #8bb4ff;
+      --accent-hover: #a5c4ff;
+      --line: #29364b;
+      --soft: #1d2b43;
+    }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -28,199 +38,351 @@
       line-height: 1.7;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      width: min(1080px, 90%);
-      margin: auto;
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: 0.25s ease;
     }
 
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+
     header {
-      background: var(--surface);
+      background: #101a2b;
       border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     nav {
-      min-height: 70px;
+      min-height: 72px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .brand {
-      font-size: 19px;
+      color: #ffffff;
+      font-size: 21px;
       font-weight: 700;
-      color: var(--text);
-      letter-spacing: .3px;
+      letter-spacing: 0.5px;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 22px;
+      list-style: none;
       flex-wrap: wrap;
-      font-size: 13px;
     }
 
-    .nav-links a { color: var(--muted); }
+    .nav-links a {
+      color: #c1ccdc;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
 
     .hero {
-      padding: 100px 0 85px;
-      background: linear-gradient(120deg, #edf2fa, #f7f8fa 70%);
+      padding: 110px 0 95px;
+      background: linear-gradient(120deg, #1b2b46, #0b1120 75%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-content {
+      max-width: 800px;
     }
 
     .eyebrow {
       color: var(--accent);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 16px;
     }
 
-    h1 {
-      font-size: clamp(40px, 7vw, 66px);
-      line-height: 1.1;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+      color: #ffffff;
     }
 
     .hero h2 {
-      font-size: clamp(18px, 3vw, 25px);
-      color: var(--muted);
-      font-weight: 400;
-      margin-bottom: 20px;
+      font-size: clamp(19px, 3vw, 25px);
+      color: #bdc9da;
+      font-weight: 500;
+      margin-bottom: 22px;
     }
 
     .hero p {
       max-width: 700px;
-      color: #536075;
+      color: var(--muted);
       font-size: 16px;
+      margin-bottom: 30px;
     }
 
-    .hero-actions {
+    .hero-buttons {
       display: flex;
+      gap: 13px;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
     }
 
     .btn {
       display: inline-block;
-      padding: 11px 20px;
+      padding: 12px 23px;
       border-radius: 6px;
-      background: var(--accent);
-      color: white;
+      background: #7da9f8;
+      color: #0b1120;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
+      border: 1px solid #7da9f8;
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #0b1120;
+      transform: translateY(-2px);
     }
 
     .btn.secondary {
       background: transparent;
-      border: 1px solid #b9c5d8;
-      color: var(--text);
+      border: 1px solid #7da9f8;
+      color: #a8c6ff;
     }
 
-    section { padding: 75px 0; }
+    .btn.secondary:hover {
+      background: var(--surface-light);
+      color: #ffffff;
+    }
 
-    .section-heading { margin-bottom: 35px; }
+    /* General sections */
+
+    section {
+      padding: 75px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
 
     .section-heading h2 {
-      font-size: 29px;
-      letter-spacing: -.7px;
+      font-size: 30px;
+      color: #ffffff;
       margin-bottom: 8px;
     }
 
     .section-heading p {
       color: var(--muted);
-      font-size: 14px;
+      max-width: 700px;
     }
 
-    .card {
+    .section-label {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* About */
+
+    .about-text {
+      max-width: 900px;
+      color: #c2ccda;
+      font-size: 16px;
+    }
+
+    .about-text p + p {
+      margin-top: 15px;
+    }
+
+    /* Cards */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card,
+    .project-card,
+    .skill,
+    .contact-item,
+    .education-item {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 10px;
       padding: 25px;
-      margin-bottom: 18px;
+      transition: 0.25s ease;
     }
 
-    .card h3 {
+    .card:hover,
+    .project-card:hover,
+    .skill:hover {
+      border-color: #5879ad;
+      transform: translateY(-3px);
+    }
+
+    .card h3,
+    .project-card h3,
+    .education-item h3 {
+      color: #ffffff;
       font-size: 19px;
-      margin-bottom: 5px;
+      margin-bottom: 7px;
+    }
+
+    .card h4 {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     .meta {
-      color: var(--accent);
+      color: #8fa0b8;
       font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: 15px;
     }
 
-    .card ul {
-      padding-left: 19px;
-      color: #566174;
-      font-size: 14px;
-    }
-
-    .card li { margin-bottom: 8px; }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 24px;
-    }
-
-    .project-card h3 {
-      font-size: 17px;
-      margin-bottom: 6px;
-    }
-
-    .project-card .meta { margin-bottom: 12px; }
-
-    .project-card p {
-      color: #566174;
-      font-size: 14px;
-    }
-
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .skill {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      padding: 20px;
-      border-radius: 9px;
-    }
-
-    .skill h3 {
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-
-    .skill p {
+    .card p,
+    .project-card p,
+    .education-item p {
       color: var(--muted);
       font-size: 14px;
     }
 
-    .education-item { margin-bottom: 23px; }
-    .education-item:last-child { margin-bottom: 0; }
+    .card ul {
+      padding-left: 19px;
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-    .education-item h3 { font-size: 17px; }
-    .education-item p { color: var(--muted); font-size: 14px; }
+    .card li {
+      margin-bottom: 8px;
+    }
+
+    /* Projects */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-card p {
+      margin-bottom: 15px;
+    }
+
+    .project-card .project-link {
+      margin-top: auto;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
+    }
+
+    .tag {
+      background: #22334e;
+      border: 1px solid #344968;
+      color: #b7d0ff;
+      border-radius: 20px;
+      padding: 5px 11px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Education */
+
+    .education-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .education-item {
+      border-left: 3px solid var(--accent);
+    }
+
+    .education-item .meta {
+      margin-bottom: 8px;
+    }
+
+    /* Certifications */
+
+    .cert-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .cert-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      color: #dce6f5;
+      font-size: 14px;
+    }
+
+    .cert-item::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 9px;
+    }
+
+    /* Skills */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill h3 {
+      color: var(--accent);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .skill p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Contact */
 
     .contact-grid {
       display: grid;
@@ -229,283 +391,492 @@
     }
 
     .contact-item {
-      background: var(--surface);
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
+      color: var(--muted);
       font-size: 14px;
+      overflow-wrap: anywhere;
     }
 
+    .contact-item strong {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    /* References */
+
+    .reference-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+
     footer {
-      background: #202938;
-      color: #dce2ec;
+      background: #070c16;
+      color: #a6b2c5;
       text-align: center;
       padding: 28px 15px;
       font-size: 13px;
     }
 
-    footer p { margin-bottom: 5px; }
+    /* Responsive layout */
 
-    @media (max-width: 700px) {
-      nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
-      .nav-links { gap: 12px 17px; }
-      .hero { padding: 70px 0; }
-      section { padding: 55px 0; }
-      .project-grid, .skill-grid, .contact-grid { grid-template-columns: 1fr; }
-      h1 { letter-spacing: -1px; }
+    @media (max-width: 800px) {
+      .nav-links {
+        gap: 12px;
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .card-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid,
+      .cert-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 10px 16px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .skills-grid,
+      .cert-list,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 26px;
+      }
+
+      .card,
+      .project-card,
+      .skill,
+      .education-item {
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <nav class="container">
-    <a class="brand" href="#home">SANDUNI NAVODYA</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
+  <!-- Navigation -->
+  <header>
+    <nav class="container">
+      <a href="#home" class="brand">Sanduni Navodya</a>
 
-<main>
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="eyebrow">Digital Experience · Content · MarTech</div>
-      <h1>Sanduni Navodya</h1>
-      <h2>Digital Experience & Content Management Professional</h2>
-      <p>
-        Bridging business, technology and digital experiences through
-        content strategy, CMS platforms, website optimisation and
-        marketing technology. Passionate about creating meaningful
-        digital experiences that support both user needs and business goals.
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn secondary" href="https://linkedin.com/in/sanduni-navodya" target="_blank" rel="noopener">LinkedIn profile</a>
-      </div>
-    </div>
-  </section>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Introduction</div>
-        <h2>About Me</h2>
-      </div>
-      <p>
-        Results-driven Digital Consultant and Content Lead with expertise
-        in web content management, CMS platforms, web development and SEO.
-        Experienced in developing and optimising digital content and
-        websites to improve user experience, search visibility and business
-        performance. Skilled in translating business requirements into
-        effective digital solutions, collaborating with cross-functional
-        teams, and leveraging data and digital trends to drive continuous
-        improvement.
-      </p>
-    </div>
-  </section>
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Digital Experience | CMS | MarTech</div>
 
-  <section id="experience">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Career journey</div>
-        <h2>Professional Experience</h2>
-      </div>
+          <h1>Sanduni Navodya</h1>
 
-      <article class="card">
-        <h3>Digital Content Lead / Content Author</h3>
-        <div class="meta">MayTech / AKQA · January 2025 – Present · Australia</div>
-        <ul>
-          <li>Manage digital content and website operations for Nissan Australia and New Zealand, overseeing content updates and publishing across CMS platforms.</li>
-          <li>Work closely with web development, SEO and EDM teams to deliver and optimise digital campaigns, ensuring content aligns with business and customer objectives.</li>
-          <li>Manage end-to-end campaign activities, monitor performance against KPIs, and use insights to improve engagement, user experience and digital performance.</li>
-          <li>Collaborate with cross-functional teams to resolve issues, implement AI practices and deliver effective digital solutions.</li>
-        </ul>
-      </article>
+          <h2>Digital Consultant & Content Lead</h2>
 
-      <article class="card">
-        <h3>Digital Consultant</h3>
-        <div class="meta">Acuity Analytics · January 2019 · US / UK</div>
-        <ul>
-          <li>Collaborated with leading investment banks in the US and UK, handling email marketing campaigns, web content management and campaign performance assessment.</li>
-          <li>Worked on website optimisation, focusing on SEO, personalisation and improving the overall digital user experience.</li>
-          <li>Engaged with cross-functional teams to execute campaigns and resolve challenges.</li>
-          <li>Provided knowledge assistance on IT, digital marketing and related best practices.</li>
-          <li>Monitored project success through defined KPIs, ensuring objectives were met and strategies optimised for performance.</li>
-        </ul>
-      </article>
+          <p>
+            Bridging business, technology and creativity to build meaningful
+            digital experiences. Experienced in digital content management,
+            CMS platforms, website optimisation, SEO and marketing technology.
+          </p>
 
-      <article class="card">
-        <h3>Customer Relation Executive</h3>
-        <div class="meta">Stretchline Holdings (MAS) · 2017 – 2019</div>
-        <ul>
-          <li>Managed client accounts and customer services, handling local and international vendors associated with Victoria's Secret, Victoria's Secret Sport and La Senza.</li>
-          <li>Analysed customer purchasing patterns, obtained future projections and developed strategies to meet delivery requirements while optimising capacity utilisation.</li>
-          <li>Prepared reports for brands, focusing on capacity utilisation and performance scorecards.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Selected work</div>
-        <h2>Projects</h2>
-        <p>Digital platforms, campaign delivery and technology initiatives.</p>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Nissan Campaign Management</h3>
-          <div class="meta">AKQA · <a href="https://www.nissan.com.au/" target="_blank" rel="noopener">Nissan Australia</a></div>
-          <p>Managed digital campaigns for Nissan Australia and New Zealand, including month-end offers and ad-hoc promotional campaigns across website platforms.</p>
-        </article>
-
-        <article class="project-card">
-          <h3>Website Redesign – Contentstack</h3>
-          <div class="meta">Pepperstone · March 2026 – June 2026 · <a href="https://pepperstone.com/en/" target="_blank" rel="noopener">Website</a></div>
-          <p>Contributed to a website redesign using UI/UX principles, interactive page templates and reusable components. Applied SEO best practices and website optimisation strategies to improve search visibility and performance.</p>
-        </article>
-
-        <article class="project-card">
-          <h3>EDM Platform Migration</h3>
-          <div class="meta">Acuity Analytics</div>
-          <p>Supported the migration of the Electronic Direct Mail platform from Salesforce Marketing Cloud to Pardot, contributing to content, campaign and digital marketing activities.</p>
-        </article>
-
-        <article class="project-card">
-          <h3>Fast Food Delivery Website</h3>
-          <div class="meta">University of Kelaniya · Master's project</div>
-          <p>Developed a functional website as part of the Web Development module, applying HTML, CSS, JavaScript and core web development principles.</p>
-        </article>
-
-        <article class="project-card">
-          <h3>Smart Garden IoT Concept</h3>
-          <div class="meta">University of Kelaniya · Master's project</div>
-          <p>Designed a smart garden concept as part of the IoT module, exploring connected technology and practical IoT applications.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Academic background</div>
-        <h2>Education</h2>
-      </div>
-
-      <div class="card">
-        <div class="education-item">
-          <h3>Master of Information Technology – Merit Pass</h3>
-          <p>University of Kelaniya · Sri Lanka · 2025</p>
-          <p>Data Analytics, Programming Languages, Web Development, Software Engineering, Digital Transformation, AI, Machine Learning and Networking.</p>
-        </div>
-        <div class="education-item">
-          <h3>CIMA – Passed Finalist</h3>
-          <p>Chartered Institute of Management Accountants · United Kingdom · 2018</p>
-          <p>Financial Strategy, Enterprise Management, Performance Strategy and Financial Statement Analysis.</p>
-        </div>
-        <div class="education-item">
-          <h3>Bachelor of Business Management (Special) Degree in Marketing – Second Class Upper Division</h3>
-          <p>University of Kelaniya · Sri Lanka · 2018</p>
-          <p>Advanced Digital Marketing, Business Management, Retail Marketing and Business Strategy.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn">Explore My Work</a>
+            <a href="#contact" class="btn secondary">Get in Touch</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="certifications">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Professional development</div>
-        <h2>Certifications</h2>
-      </div>
-      <div class="card">
-        <ul>
-          <li>Inbound Marketing Certification – HubSpot Academy</li>
-          <li>HTML & CSS – LinkedIn Learning</li>
-          <li>Adobe Photoshop – LinkedIn Learning</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Introduction</div>
+          <h2>About Me</h2>
+          <p>A blend of business knowledge, technology and digital experience.</p>
+        </div>
 
-  <section id="skills">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Capabilities</div>
-        <h2>Skills & Technologies</h2>
-      </div>
+        <div class="about-text">
+          <p>
+            I am a results-driven Digital Consultant and Content Lead with
+            experience in web content management, CMS platforms, digital
+            marketing and website optimisation. My work focuses on creating
+            and improving digital experiences that support business objectives
+            and enhance user engagement.
+          </p>
 
-      <div class="skill-grid">
-        <div class="skill">
-          <h3>Front-End Technologies</h3>
-          <p>HTML · CSS · JavaScript</p>
-        </div>
-        <div class="skill">
-          <h3>CMS & Digital Experience Platforms</h3>
-          <p>Adobe Experience Manager (AEM) · Contentstack · Storyblok · Content Factory</p>
-        </div>
-        <div class="skill">
-          <h3>Marketing Automation & EDM</h3>
-          <p>Oracle Eloqua · HubSpot · Salesforce Marketing Cloud · Pardot</p>
-        </div>
-        <div class="skill">
-          <h3>Web Analytics</h3>
-          <p>Google Analytics 4 (GA4) · Adobe Analytics</p>
-        </div>
-        <div class="skill">
-          <h3>SEO & Website Optimisation</h3>
-          <p>Screaming Frog · Siteimprove · Google Search Console · Semrush</p>
-        </div>
-        <div class="skill">
-          <h3>Design & Prototyping</h3>
-          <p>Adobe Photoshop · Adobe Illustrator · Figma</p>
-        </div>
-        <div class="skill">
-          <h3>Workflow & Project Management</h3>
-          <p>Jira · Confluence</p>
+          <p>
+            With an academic background in Marketing Management, CIMA and
+            Information Technology, I bring a combination of business
+            understanding and technical knowledge to digital projects.
+          </p>
+
+          <p>
+            I enjoy translating business requirements into practical digital
+            solutions, collaborating with cross-functional teams and exploring
+            emerging technologies to improve digital workflows and performance.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Let's connect</div>
-        <h2>Contact</h2>
-        <p>Interested in digital experience, content, MarTech and collaboration opportunities.</p>
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Career Journey</div>
+          <h2>Professional Experience</h2>
+          <p>Experience across digital content, website operations and customer relationships.</p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Digital Content Lead / Content Author</h3>
+            <h4>MayTech / AKQA</h4>
+            <div class="meta">January 2025 – Present | Australia / New Zealand</div>
+
+            <ul>
+              <li>Manage website content and digital operations for Nissan Australia and New Zealand.</li>
+              <li>Work with CMS platforms to author, maintain and optimise website content.</li>
+              <li>Collaborate with development, SEO and EDM teams to deliver digital campaigns and website enhancements.</li>
+              <li>Support website launches, content updates, quality assurance and issue resolution.</li>
+              <li>Coordinate with cross-functional and regional teams to ensure consistent digital delivery.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Digital Consultant</h3>
+            <h4>Acuity Analytics</h4>
+            <div class="meta">January 2019 | US / UK Investment Banking Projects</div>
+
+            <ul>
+              <li>Supported digital marketing campaigns and website content management for investment banking clients.</li>
+              <li>Managed email marketing activities, audience segmentation and campaign execution.</li>
+              <li>Contributed to website optimisation, SEO, personalisation and user experience improvements.</li>
+              <li>Monitored campaign performance and KPIs to identify optimisation opportunities.</li>
+              <li>Collaborated with stakeholders to deliver digital marketing and content requirements.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Customer Relations Executive</h3>
+            <h4>Stretchline Holdings (MAS)</h4>
+            <div class="meta">2017 – 2019 | Sri Lanka</div>
+
+            <ul>
+              <li>Managed relationships with local and international vendor accounts.</li>
+              <li>Worked with customer requirements, purchasing patterns and delivery projections.</li>
+              <li>Coordinated capacity planning and production-related requirements.</li>
+              <li>Prepared reports on capacity utilisation, performance and operational scorecards.</li>
+            </ul>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="contact-grid">
-        <div class="contact-item"><strong>Location</strong><br>Sri Lanka</div>
-        <div class="contact-item"><strong>Email</strong><br><a href="mailto:sanduni.258@gmail.com">sanduni.258@gmail.com</a></div>
-        <div class="contact-item"><strong>Phone</strong><br><a href="tel:+94778794769">+94 77 879 4769</a></div>
-        <div class="contact-item"><strong>LinkedIn</strong><br><a href="https://linkedin.com/in/sanduni-navodya" target="_blank" rel="noopener">linkedin.com/in/sanduni-navodya</a></div>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Selected Work</div>
+          <h2>Projects & Contributions</h2>
+          <p>A selection of professional and academic projects across digital experience and technology.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <h3>Nissan Digital Campaign Management</h3>
+            <div class="meta">AKQA | Australia & New Zealand</div>
+            <p>
+              Supported website campaign management and promotional content
+              updates across Nissan's regional websites, including month-end
+              offers and ad hoc campaigns.
+            </p>
+            <div class="tag-list">
+              <span class="tag">AEM</span>
+              <span class="tag">CMS</span>
+              <span class="tag">Digital Content</span>
+              <span class="tag">Campaigns</span>
+            </div>
+            <a class="project-link" href="https://www.nissan.com.au/" target="_blank" rel="noopener noreferrer">Visit Nissan Australia ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Pepperstone Website Redesign</h3>
+            <div class="meta">March – June 2026 | Contentstack</div>
+            <p>
+              Contributed to website content migration and redesign activities,
+              working with reusable content templates, interactive components,
+              SEO requirements and multi-locale content.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Contentstack</span>
+              <span class="tag">CMS</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Digital Experience</span>
+            </div>
+            <a class="project-link" href="https://pepperstone.com/en/" target="_blank" rel="noopener noreferrer">Visit Pepperstone ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>EDM Platform Migration</h3>
+            <div class="meta">Acuity Analytics</div>
+            <p>
+              Contributed to email marketing platform migration activities,
+              supporting the transition from Salesforce Marketing Cloud to
+              Pardot and related campaign workflows.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Pardot</span>
+              <span class="tag">Salesforce</span>
+              <span class="tag">EDM</span>
+              <span class="tag">Marketing Automation</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Fast Food Delivery Website</h3>
+            <div class="meta">University of Kelaniya | Master's Project</div>
+            <p>
+              Developed a web-based food delivery concept as part of the
+              Web Development module, applying frontend development principles
+              and responsive design.
+            </p>
+            <div class="tag-list">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Web Development</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Smart Garden IoT Concept</h3>
+            <div class="meta">University of Kelaniya | Master's Project</div>
+            <p>
+              Explored an Internet of Things concept focused on smart garden
+              monitoring and technology-enabled automation as part of an
+              academic project.
+            </p>
+            <div class="tag-list">
+              <span class="tag">IoT</span>
+              <span class="tag">Technology</span>
+              <span class="tag">Automation</span>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
-</main>
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Academic Background</div>
+          <h2>Education</h2>
+          <p>Business, marketing and technology.</p>
+        </div>
 
-<footer>
-  <p>© <span id="year"></span> Sanduni Navodya. All rights reserved.</p>
-  <p>Digital Experience · Content Management · MarTech</p>
-</footer>
+        <div class="education-list">
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+          <article class="education-item">
+            <h3>Master of Information Technology</h3>
+            <div class="meta">University of Kelaniya | 2025 | Merit Pass</div>
+            <p>
+              Focus areas included data analytics, programming, web development,
+              software engineering, digital transformation, artificial
+              intelligence, machine learning and networking.
+            </p>
+          </article>
+
+          <article class="education-item">
+            <h3>CIMA – Passed Finalist</h3>
+            <div class="meta">Chartered Institute of Management Accountants, UK | 2018</div>
+            <p>
+              Studies included financial strategy, enterprise management,
+              performance strategy and financial statement analysis.
+            </p>
+          </article>
+
+          <article class="education-item">
+            <h3>Bachelor of Business Management – Special Degree in Marketing</h3>
+            <div class="meta">University of Kelaniya | 2018 | Second Class Upper Division</div>
+            <p>
+              Focus areas included marketing strategy, digital marketing,
+              business management and retail marketing.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Professional Development</div>
+          <h2>Certifications</h2>
+        </div>
+
+        <div class="cert-list">
+          <div class="cert-item">Inbound Marketing Certification – HubSpot Academy</div>
+          <div class="cert-item">HTML & CSS – LinkedIn Learning</div>
+          <div class="cert-item">Adobe Photoshop – LinkedIn Learning</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Capabilities</div>
+          <h2>Skills & Technologies</h2>
+          <p>A combination of digital, technical, analytical and creative capabilities.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill">
+            <h3>Frontend Development</h3>
+            <p>HTML, CSS, JavaScript</p>
+          </article>
+
+          <article class="skill">
+            <h3>CMS & Digital Experience</h3>
+            <p>Adobe Experience Manager, Contentstack, Storyblok, Content Factory</p>
+          </article>
+
+          <article class="skill">
+            <h3>Marketing Automation & EDM</h3>
+            <p>Oracle Eloqua, HubSpot, Salesforce Marketing Cloud, Pardot</p>
+          </article>
+
+          <article class="skill">
+            <h3>Analytics & Reporting</h3>
+            <p>Google Analytics 4, Adobe Analytics</p>
+          </article>
+
+          <article class="skill">
+            <h3>SEO & Optimisation</h3>
+            <p>Screaming Frog, Siteimprove, Google Search Console, Semrush</p>
+          </article>
+
+          <article class="skill">
+            <h3>Design & Creative Tools</h3>
+            <p>Adobe Photoshop, Illustrator, Figma</p>
+          </article>
+
+          <article class="skill">
+            <h3>Project & Workflow Management</h3>
+            <p>Jira, Confluence</p>
+          </article>
+
+          <article class="skill">
+            <h3>AI & Digital Innovation</h3>
+            <p>AI-assisted content creation, generative AI and workflow optimisation</p>
+          </article>
+
+          <article class="skill">
+            <h3>Digital Marketing</h3>
+            <p>Content strategy, campaign management, personalisation and user experience</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Let's Connect</div>
+          <h2>Contact</h2>
+          <p>Interested in digital experience, content, technology or collaboration? Let's connect.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:sanduni.258@gmail.com">sanduni.258@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+94778794769">+94 77 879 4769</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/sanduni-navodya/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile ↗</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Location</strong>
+            Sri Lanka
+          </div>
+
+          <div class="contact-item">
+            <strong>GitHub</strong>
+            <a href="https://github.com/sanduni-bio" target="_blank" rel="noopener noreferrer">View GitHub Profile ↗</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Sanduni Navodya. All rights reserved.</p>
+    <p>Digital Experience | CMS | MarTech | Analytics</p>
+  </footer>
 
 </body>
 </html>
-
